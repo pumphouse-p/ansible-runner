@@ -6,6 +6,7 @@ USER 0
 RUN dnf upgrade -y && \
     pip install --upgrade pip && \
     pip install ansible==${ANSIBLE_VERSION} && \
+    pip install jmespath && \
     mkdir -p /playbooks && \
     chown 1001:1001 /playbooks
 USER 1001
